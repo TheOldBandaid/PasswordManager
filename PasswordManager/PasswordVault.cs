@@ -1,4 +1,3 @@
-
 namespace PasswordManager;
 
 public class PasswordVault
