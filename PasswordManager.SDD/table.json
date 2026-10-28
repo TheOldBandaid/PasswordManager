@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Получение сохранённого пароля",
+    "operation": "get",
+    "authorized": true,
+    "initialSite": "example.com",
+    "initialPassword": "mySecret123",
+    "site": "example.com",
+    "password": null,
+    "expectedPassword": "mySecret123",
+    "expectedException": null
+  },
+  {
+    "name": "Получение пароля для неизвестного сайта",
+    "operation": "get",
+    "authorized": true,
+    "initialSite": null,
+    "initialPassword": null,
+    "site": "unknown.com",
+    "password": null,
+    "expectedPassword": null,
+    "expectedException": null
+  },
+  {
+    "name": "Получение пароля без авторизации",
+    "operation": "get",
+    "authorized": false,
+    "initialSite": "example.com",
+    "initialPassword": "mySecret123",
+    "site": "example.com",
+    "password": null,
+    "expectedPassword": null,
+    "expectedException": "UnauthorizedAccessException"
+  },
+  {
+    "name": "Сохранение нового пароля",
+    "operation": "save",
+    "authorized": true,
+    "initialSite": null,
+    "initialPassword": null,
+    "site": "example.com",
+    "password": "newSecret456",
+    "expectedPassword": "newSecret456",
+    "expectedException": null
+  },
+  {
+    "name": "Обновление сохранённого пароля",
+    "operation": "update",
+    "authorized": true,
+    "initialSite": "example.com",
+    "initialPassword": "oldSecret123",
+    "site": "example.com",
+    "password": "newSecret456",
+    "expectedPassword": "newSecret456",
+    "expectedException": null
+  },
+  {
+    "name": "Удаление сохранённого пароля",
+    "operation": "delete",
+    "authorized": true,
+    "initialSite": "example.com",
+    "initialPassword": "mySecret123",
+    "site": "example.com",
+    "password": null,
+    "expectedPassword": null,
+    "expectedException": null
+  }
+]
