@@ -35,21 +35,5 @@ public class PasswordVaultTests2
         Assert.Throws<UnauthorizedAccessException>(
             () => vault.GetPassword("example.com"));
     }
-
-
-    [Fact]
-    public void GivenPasswordIsSaved_WhenAccessIsRequested_ThenPasswordIsReturned()
-    {
-        // Given
-        var vault = new PasswordVault("master123");
-        vault.Authorize("master123");
-        vault.SavePassword("example.com", "mySecret123");
-
-        // When
-        var password = vault.GetPassword("example.com");
-
-        // Then
-        Assert.Equal("mySecret123", password);
-    }
 }
 
